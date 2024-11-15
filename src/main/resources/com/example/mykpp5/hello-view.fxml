@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_form" prefHeight="404.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mykpp5.HelloController">
+   <children>
+      <TableView fx:id="AtmoshereData_TableView" layoutX="207.0" layoutY="62.0" prefHeight="200.0" prefWidth="346.0">
+         <columns>
+            <TableColumn fx:id="ID_column" prefWidth="51.20001220703125" text="ID" />
+            <TableColumn fx:id="date_column" prefWidth="99.20001220703125" text="Дата" />
+            <TableColumn fx:id="temperature_column" prefWidth="112.0" text="Температура °(C)" />
+            <TableColumn fx:id="pressure_column" prefWidth="79.99993896484375" text="Тиск (hPa)" />
+         </columns>
+      </TableView>
+      <Button fx:id="updateBtn" layoutX="380.0" layoutY="284.0" mnemonicParsing="false" onAction="#updateData" prefHeight="34.0" prefWidth="88.0" text="Реадагувати" />
+      <Button fx:id="deleteBtn" layoutX="285.0" layoutY="284.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="34.0" prefWidth="71.0" text="Видалити" />
+      <Button fx:id="addBtn" layoutX="199.0" layoutY="284.0" mnemonicParsing="false" onAction="#addNewData" prefHeight="34.0" prefWidth="71.0" text="Добавити" />
+      <TextField fx:id="ID_textField" layoutX="31.0" layoutY="86.0" />
+      <Label layoutX="31.0" layoutY="62.0" text="ID" />
+      <Label layoutX="31.0" layoutY="123.0" text="Дата" />
+      <TextField fx:id="temperature_textField" layoutX="31.0" layoutY="209.0" />
+      <Label layoutX="31.0" layoutY="185.0" text="Температура °(C)" />
+      <TextField fx:id="pressure_TextField" layoutX="31.0" layoutY="275.0" />
+      <Label layoutX="31.0" layoutY="251.0" text="Тиск (hPa)" />
+      <Button fx:id="showResultBtn" layoutX="199.0" layoutY="351.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#introduceData" prefHeight="42.0" prefWidth="71.0" text="Вивести результат" wrapText="true">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Label layoutX="31.0" layoutY="342.0" prefHeight="61.0" prefWidth="150.0" text="Завдання: Визначити два дні з найбільшим перепадом тиску." wrapText="true" />
+      <DatePicker fx:id="datePicker_date" layoutX="28.0" layoutY="150.0" prefHeight="26.0" prefWidth="158.0" />
+      <Button fx:id="curren_dateBtn" layoutX="107.0" layoutY="120.0" mnemonicParsing="false" onAction="#curretnDate" text="Потона дата">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="569.0" layoutY="1.0" mnemonicParsing="false" onAction="#close" prefHeight="26.0" prefWidth="35.0" text="Х" />
+      <Button fx:id="hideBtn" layoutX="535.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimize" prefHeight="26.0" prefWidth="35.0" text="—" />
+      <Button fx:id="ShowAllTable" layoutX="295.0" layoutY="351.0" mnemonicParsing="false" onAction="#loadData" prefHeight="42.0" prefWidth="88.0" text="Показати повний список" wrapText="true">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
